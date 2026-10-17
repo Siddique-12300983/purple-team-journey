@@ -1,24 +1,10 @@
 # Roadmap
 
-Summer break 2026-27: Oct 19, 2026 to mid March 2027.
-Learning time is about 7.5 hours a week around work.
-
-## Weekly schedule
-
-| Day | Learning slot | What to do |
-|---|---|---|
-| Mon | 10am - 2pm (4 hrs) | Hands-on lab work and the weekly note |
-| Tue | 7:30 - 8:30pm (1 hr) | Reading, a course module or a Python exercise |
-| Wed | 7:30 - 8:30pm (1 hr) | Same as Tuesday |
-| Fri | 4 - 5:30pm (1.5 hrs) | Flashcards, a TryHackMe room, plan Monday's lab |
-| Thu, Sat, Sun | Audio only | Darknet Diaries, Risky Business |
-
-If a week gets busy, protect Monday.
+The plan I'm working through, phase by phase.
 
 ## Phase 0: Setup (Oct 19 - 25)
 
-- [ ] Check laptop RAM is stable before running VMs
-- [ ] Update Fedora, install git, VS Code, virt-manager (KVM)
+- [ ] Fedora host with git, VS Code and KVM (virt-manager)
 - [ ] Set up this repo and write the first weekly note
 
 ## Phase 1: Roots (Oct 26 - Dec 20)
@@ -54,11 +40,9 @@ If a week gets busy, protect Monday.
 - [ ] Three solid attack + detection write-ups
 - [ ] Portfolio website
 - [ ] Tech-focused CV
-- [ ] Internship applications for the last two terms
 
-## Running the whole time
+## Ongoing
 
-- Weekly note in this repo, even if it's 5 lines
-- One CTF or box every fortnight
-- A security meetup every other month (BSides Sydney, OWASP Sydney, AISA Sydney)
-- Certs: decide in Feb 2027 based on what target internships ask for
+- Weekly notes in this repo
+- CTFs and HackTheBox / TryHackMe boxes
+- Local security meetups (BSides Sydney, OWASP Sydney, AISA Sydney)

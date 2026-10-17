@@ -16,7 +16,3 @@
 ## What confused me
 
 -
-
-## Next week
-
--
