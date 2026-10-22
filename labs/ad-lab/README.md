@@ -174,3 +174,5 @@ host -t SRV _ldap._tcp.dc._msdcs.purple.internal
 - Windows on KVM needs virtio drivers loaded by hand, both for the disk during setup and the network after.
 - UEFI changes how VM snapshots work.
 - Save passwords right away. I nearly had to rebuild the DC because I thought I'd forgotten the admin password. I'd actually been typing a `/` instead of a `\` the whole time.
+
+See [domain-structure.md](domain-structure.md) for how I set the domain up as a fake company (OUs, users, groups, GPOs).
