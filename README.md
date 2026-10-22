@@ -30,7 +30,7 @@ Full plan: [ROADMAP.md](ROADMAP.md)
 
 ## Lab
 
-Fedora host with KVM. VMs: Windows Server, Windows 11, Kali.
+Arch Linux host with KVM (libvirt, virt-manager). VMs: Windows Server 2025 (domain controller), Windows 11, Kali. Build notes in [labs/ad-lab](labs/ad-lab).
 
 ## Write-ups
 
