@@ -32,9 +32,15 @@ Full plan: [ROADMAP.md](ROADMAP.md)
 
 Arch Linux host with KVM (libvirt, virt-manager). VMs: Windows Server 2025 (domain controller), Windows 11, Kali. Build notes in [labs/ad-lab](labs/ad-lab).
 
-## Write-ups
+## Highlights
 
-Coming soon.
+| What | Link |
+|---|---|
+| AD home lab build: DC, domain-joined Windows 11, Kali, and every problem I hit | [labs/ad-lab](labs/ad-lab) |
+| Fake company domain: OUs, users, groups, GPOs, Kerberoastable service account | [domain-structure.md](labs/ad-lab/domain-structure.md) |
+| Latest weekly note | [Week 43](weekly-notes/2026-W43.md) |
+
+![Login banner GPO on Windows 11](labs/ad-lab/screenshots/gpo-login-banner.png)
 
 ## Contact
 
