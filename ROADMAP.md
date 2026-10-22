@@ -4,8 +4,8 @@ The plan I'm working through, phase by phase.
 
 ## Phase 0: Setup (Oct 19 - 25)
 
-- [ ] Fedora host with git, VS Code and KVM (virt-manager)
-- [ ] Set up this repo and write the first weekly note
+- [x] Arch Linux host with git and KVM (virt-manager)
+- [x] Set up this repo and write the first weekly note
 
 ## Phase 1: Roots (Oct 26 - Dec 20)
 
