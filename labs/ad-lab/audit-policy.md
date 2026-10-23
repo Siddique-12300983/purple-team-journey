@@ -6,7 +6,7 @@ My Harbourline Freight domain was working, but it wasn't logging much that would
 
 ## Why bother
 
-Windows doesn't log most of this by default. Process creation is off, and so is the command line. If an attacker ran commands on a workstation, there would be nothing to look at afterwards. Every detection I build later (Sysmon, Wazuh, Sigma rules) depends on these logs existing first.
+Windows doesn't log most of this by default. Process creation is off, and so is the command line. If an attacker ran commands on a workstation, there would be nothing to look at afterwards. Detection tools like Wazuh and Sigma rules only work if these logs exist in the first place.
 
 ## The GPO
 
@@ -130,3 +130,5 @@ w32tm /stripchart /computer:dc01.purple.internal /samples:3 /dataonly
 - The DC is the time source for the domain, so its clock has to be right.
 - If a clock is wrong, the log timeline is wrong too. That's why NTP matters so much for investigations.
 - `net.exe` runs `net1.exe` behind the scenes, so detections need to cover both.
+
+Next: [sysmon.md](sysmon.md) for adding Sysmon on WIN11.
