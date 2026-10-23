@@ -38,6 +38,7 @@ Arch Linux host with KVM (libvirt, virt-manager). VMs: Windows Server 2025 (doma
 |---|---|
 | AD home lab build: DC, domain-joined Windows 11, Kali, and every problem I hit | [labs/ad-lab](labs/ad-lab) |
 | Fake company domain: OUs, users, groups, GPOs, Kerberoastable service account | [domain-structure.md](labs/ad-lab/domain-structure.md) |
+| Audit logging: one GPO, 10 audit settings, tested with real events (4688, 4771, 4728) | [audit-policy.md](labs/ad-lab/audit-policy.md) |
 | Latest weekly note | [Week 43](weekly-notes/2026-W43.md) |
 
 ![Login banner GPO on Windows 11](labs/ad-lab/screenshots/gpo-login-banner.png)

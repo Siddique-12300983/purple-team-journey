@@ -124,3 +124,5 @@ Get-ADUser -Filter "ServicePrincipalName -like '*'" -Properties ServicePrincipal
 - The domain password policy only works from the domain root.
 - A failed `New-ADUser` can still leave an account behind. Check before running it again.
 - Service accounts with SPNs and old passwords are a big target, and now I know why.
+
+Next: [audit-policy.md](audit-policy.md) for how I turned on logging across the domain.
