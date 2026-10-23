@@ -108,3 +108,5 @@ The fields that matter most:
 - Check the signature of anything you download before running it as admin.
 - `OriginalFileName` catches renamed tools.
 - WPAD lookups happen on their own, and tools like Responder take advantage of that.
+
+Next: [kerberoasting.md](kerberoasting.md) for the first full attack-and-detect loop.

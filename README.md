@@ -40,6 +40,7 @@ Arch Linux host with KVM (libvirt, virt-manager). VMs: Windows Server 2025 (doma
 | Fake company domain: OUs, users, groups, GPOs, Kerberoastable service account | [domain-structure.md](labs/ad-lab/domain-structure.md) |
 | Audit logging: one GPO, 10 audit settings, tested with real events (4688, 4771, 4728) | [audit-policy.md](labs/ad-lab/audit-policy.md) |
 | Sysmon on Windows 11: one command traced through DNS, network and process events | [sysmon.md](labs/ad-lab/sysmon.md) |
+| Kerberoasting attack and detect: AES roast, 4769 shows 0x12 not 0x17, password policy beat the crack | [kerberoasting.md](labs/ad-lab/kerberoasting.md) |
 | Latest weekly note | [Week 43](weekly-notes/2026-W43.md) |
 
 ![Login banner GPO on Windows 11](labs/ad-lab/screenshots/gpo-login-banner.png)
