@@ -49,6 +49,7 @@ in [labs/ad-lab](labs/ad-lab).
 | Audit logging | One GPO, 10 audit subcategories, tested with real 4688/4771/4728 events | [audit-policy.md](labs/ad-lab/audit-policy.md) |
 | Endpoint telemetry | Sysmon on WIN11 with the SwiftOnSecurity config, traced through events 1, 3 and 22 | [sysmon.md](labs/ad-lab/sysmon.md) |
 | First purple loop | Kerberoasting: attack from Kali/WIN11, detect in 4769, harden | [kerberoasting.md](labs/ad-lab/kerberoasting.md) |
+| Second purple loop | LLMNR/NBT-NS/mDNS poisoning: capture a hash, detect it, harden all three protocols | [llmnr.md](labs/ad-lab/llmnr.md) |
 
 ![Login banner GPO on Windows 11](labs/ad-lab/screenshots/gpo-login-banner.png)
 
@@ -68,7 +69,7 @@ Each exercise follows the same loop, which is the point of working purple:
 The Kerberoasting write-up is the first full loop. The useful lesson from it:
 Windows Server 2025 refuses to issue RC4 tickets, so the roast came back as AES
 (`0x12` in the 4769 event), and the classic "alert on RC4 `0x17`" detection
-would have missed it. On a modern domain you need behavioural signals too.
+would have missed it. On a modern domain you need behavioural signals too. The LLMNR/NBT-NS poisoning write-up is the second loop, and its lesson is the sensor side: my Sigma rule was blind because the Sysmon config logged no UDP, so I had to fix the telemetry before the rule could fire.
 
 ### Detection tooling I've built alongside the lab
 
@@ -126,9 +127,9 @@ More, with the full context, in
 | 3. Red | Feb - Mar 2027 | Recon, web attacks, AD attacks, privilege escalation |
 | 4. Purple | Mar 2027 onward | Attack, detect, tune, write up |
 
-Next up: Wazuh collecting the lab's logs, and more attack-and-detect loops
-(LLMNR poisoning, then tuning the Sigma rules against what actually fires). Full
-plan in [ROADMAP.md](ROADMAP.md).
+Next up: Wazuh collecting the lab's logs so detections fire as real alerts, then
+Atomic Red Team and more attack-and-detect loops against the lab. Full plan in
+[ROADMAP.md](ROADMAP.md).
 
 ## Contact
 

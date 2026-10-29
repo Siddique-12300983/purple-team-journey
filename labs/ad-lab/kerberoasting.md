@@ -95,3 +95,5 @@ On a modern AES domain you can't detect Kerberoasting by encryption type alone. 
 ## Cleanup
 
 After the exercise I put the lab back: removed the RC4 registry allowance, restarted the KDC, and set `svc_sql` back to AES only. I deleted the ticket file from Kali so no crackable material was left lying around.
+
+Next: [llmnr.md](llmnr.md) for LLMNR, NBT-NS and mDNS poisoning.
