@@ -143,3 +143,5 @@ Only after I disabled mDNS as well did the attack finally die. The client couldn
 ## Cleanup
 
 I left LLMNR, NBT-NS and mDNS disabled on the client, since that is the whole point. I kept the Sysmon config change so the telemetry stays. I re-enabled IPv6 on the NIC, and deleted the captured hash from Kali so nothing crackable was left lying around.
+
+Next: [wazuh.md](wazuh.md) for adding a Wazuh SIEM and custom detection rules.

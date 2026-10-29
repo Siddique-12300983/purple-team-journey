@@ -50,6 +50,7 @@ in [labs/ad-lab](labs/ad-lab).
 | Endpoint telemetry | Sysmon on WIN11 with the SwiftOnSecurity config, traced through events 1, 3 and 22 | [sysmon.md](labs/ad-lab/sysmon.md) |
 | First purple loop | Kerberoasting: attack from Kali/WIN11, detect in 4769, harden | [kerberoasting.md](labs/ad-lab/kerberoasting.md) |
 | Second purple loop | LLMNR/NBT-NS/mDNS poisoning: capture a hash, detect it, harden all three protocols | [llmnr.md](labs/ad-lab/llmnr.md) |
+| Central SIEM | Wazuh all-in-one collecting Security + Sysmon from both Windows hosts, with custom detection rules | [wazuh.md](labs/ad-lab/wazuh.md) |
 
 ![Login banner GPO on Windows 11](labs/ad-lab/screenshots/gpo-login-banner.png)
 
@@ -127,7 +128,7 @@ More, with the full context, in
 | 3. Red | Feb - Mar 2027 | Recon, web attacks, AD attacks, privilege escalation |
 | 4. Purple | Mar 2027 onward | Attack, detect, tune, write up |
 
-Next up: Wazuh collecting the lab's logs so detections fire as real alerts, then
+Next up: tuning each detection rule against its live attack in Wazuh, then
 Atomic Red Team and more attack-and-detect loops against the lab. Full plan in
 [ROADMAP.md](ROADMAP.md).
 
