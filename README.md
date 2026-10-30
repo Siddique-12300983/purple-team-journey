@@ -7,6 +7,25 @@ Development minor), based in Sydney and working toward a purple team role. This
 repo is where I build an Active Directory lab, attack it, detect the attacks in
 my own logs, and write up everything I learn and break along the way.
 
+## Progress
+
+<!-- progress:start -->
+```
+[################............]  58%   14 of 24 done
+```
+
+| Phase | Progress | Done |
+|---|---|---|
+| Phase 0: Setup | `################` 100% | 2/2 |
+| Phase 1: Roots | `###########.....` 67% | 4/6 |
+| Phase 2: Blue | `###########.....` 71% | 5/7 |
+| Phase 3: Red | `######..........` 40% | 2/5 |
+| Term 1 2027 onward: Purple | `####............` 25% | 1/4 |
+<!-- progress:end -->
+
+Counted straight from the checkboxes in [ROADMAP.md](ROADMAP.md), redrawn
+automatically on every push.
+
 ## Overview
 
 The lab is a small Active Directory environment running on my laptop under KVM.
@@ -24,19 +43,24 @@ in [labs/ad-lab](labs/ad-lab).
         |  NAT, DHCP off, libvirt DNS off, 10.10.10.0/24, bridge virbr10
         |  (DHCP and DNS are off on purpose: in AD the DC must be the only DNS)
         |
-   +----+-------------------+-------------------------+
-   |                        |                         |
- DC01                     WIN11                      KALI
- Windows Server 2025      Windows 11 Pro             Kali 2026.2
- 10.10.10.10              10.10.10.20                10.10.10.30
- AD DS + DNS              domain-joined client       attacker, not joined
- forest purple.internal   Sysmon + audit logging     recon and attack tools
+   +----+-------------------+---------------+--------------+
+   |                        |               |              |
+ DC01                     WIN11           KALI           WAZUH
+ Windows Server 2025      Windows 11 Pro  Kali 2026.2    Ubuntu 24.04
+ 10.10.10.10              10.10.10.20     10.10.10.30    10.10.10.40
+ AD DS + DNS              domain-joined   attacker,      Wazuh 4.14.9
+ forest purple.internal   client          not joined     indexer, manager
+ Wazuh agent              Sysmon + audit  recon and      and dashboard
+                          Wazuh agent     attack tools   custom rules
 ```
 
 - Domain: `purple.internal` (NetBIOS `PURPLE`), run as the fake company
   Harbourline Freight.
 - The network is NAT only, so the VMs reach the internet but nothing outside can
   reach them.
+- DC01 and WIN11 run Wazuh agents that ship their Security and Sysmon logs to
+  the Wazuh VM, which is where the detection rules fire. See
+  [labs/ad-lab/wazuh.md](labs/ad-lab/wazuh.md).
 - Full build notes, including the libvirt network XML and every `virt-install`
   command, are in [labs/ad-lab/README.md](labs/ad-lab/README.md).
 
@@ -44,7 +68,7 @@ in [labs/ad-lab](labs/ad-lab).
 
 | Area | What | Write-up |
 |---|---|---|
-| Lab infrastructure | Three VMs on an isolated NAT network, host snapshots with Timeshift | [ad-lab/README.md](labs/ad-lab/README.md) |
+| Lab infrastructure | Four VMs on an isolated NAT network, host snapshots with Timeshift | [ad-lab/README.md](labs/ad-lab/README.md) |
 | Domain as a company | OUs, 12 staff, security groups, three GPOs, a Kerberoastable `svc_sql` account | [domain-structure.md](labs/ad-lab/domain-structure.md) |
 | Audit logging | One GPO, 10 audit subcategories, tested with real 4688/4771/4728 events | [audit-policy.md](labs/ad-lab/audit-policy.md) |
 | Endpoint telemetry | Sysmon on WIN11 with the SwiftOnSecurity config, traced through events 1, 3 and 22 | [sysmon.md](labs/ad-lab/sysmon.md) |

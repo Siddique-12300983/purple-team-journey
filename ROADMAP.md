@@ -2,6 +2,9 @@
 
 The plan I'm working through, phase by phase.
 
+<!-- Tick a box here and the progress bars at the top of README.md update
+     themselves on the next push. See scripts/roadmap-progress.py. -->
+
 ## Phase 0: Setup (Oct 19 - 25)
 
 - [x] Arch Linux host with git and KVM (virt-manager)
@@ -10,19 +13,19 @@ The plan I'm working through, phase by phase.
 ## Phase 1: Roots (Oct 26 - Dec 20)
 
 - [ ] Linux: filesystem, permissions, users, processes, systemd, logs
-- [ ] Bash scripting basics
-- [ ] Python basics, one small script a week
+- [x] Bash scripting basics
+- [x] Python basics, one small script a week
 - [ ] Networking refresh and Wireshark
-- [ ] Windows internals: processes, services, registry, event logs
-- [ ] Build an Active Directory lab (Windows Server DC + Windows 11 client)
+- [x] Windows internals: processes, services, registry, event logs
+- [x] Build an Active Directory lab (Windows Server DC + Windows 11 client)
 
 ## Phase 2: Blue (Dec 21 - Feb 7)
 
-- [ ] Sysmon on the Windows VMs
-- [ ] Wazuh SIEM collecting logs from the lab
-- [ ] Key Windows event IDs
-- [ ] MITRE ATT&CK framework
-- [ ] Write detection rules (Sigma)
+- [x] Sysmon on the Windows VMs
+- [x] Wazuh SIEM collecting logs from the lab
+- [x] Key Windows event IDs
+- [x] MITRE ATT&CK framework
+- [x] Write detection rules (Sigma)
 - [ ] Azure fundamentals and Microsoft Sentinel basics
 - [ ] Incident response basics
 
@@ -30,15 +33,15 @@ The plan I'm working through, phase by phase.
 
 - [ ] Recon and scanning
 - [ ] Web attacks (PortSwigger Web Security Academy)
-- [ ] AD attacks in the lab (LLMNR poisoning, Kerberoasting)
+- [x] AD attacks in the lab (LLMNR poisoning, Kerberoasting)
 - [ ] Privilege escalation on Linux and Windows
-- [ ] First purple write-up: run an attack, detect it, tune the rule
+- [x] First purple write-up: run an attack, detect it, tune the rule
 
 ## Term 1 2027 onward: Purple
 
 - [ ] Atomic Red Team attack simulations against the lab
 - [ ] Three solid attack + detection write-ups
-- [ ] Portfolio website
+- [x] Portfolio website
 - [ ] Tech-focused CV
 
 ## Ongoing
