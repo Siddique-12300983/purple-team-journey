@@ -10,6 +10,17 @@ my own logs, and write up everything I learn and break along the way.
 ## Progress
 
 <!-- progress:start -->
+```
+[################............]  58%   14 of 24 done
+```
+
+| Phase | Progress | Done |
+|---|---|---|
+| Phase 0: Setup | `################` 100% | 2/2 |
+| Phase 1: Roots | `###########.....` 67% | 4/6 |
+| Phase 2: Blue | `###########.....` 71% | 5/7 |
+| Phase 3: Red | `######..........` 40% | 2/5 |
+| Term 1 2027 onward: Purple | `####............` 25% | 1/4 |
 <!-- progress:end -->
 
 Counted straight from the checkboxes in [ROADMAP.md](ROADMAP.md), redrawn
