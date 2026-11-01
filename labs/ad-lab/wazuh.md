@@ -122,3 +122,5 @@ svc=svc_sql   enc=0x12 (AES256)   reqUser=Administrator@PURPLE.INTERNAL   srcIP=
 ## Status
 
 Wazuh is collecting Security and Sysmon from both Windows hosts. The Kerberoasting rule fires on the live attack. The LLMNR and rogue-SMB rules are written and loaded, still to be tested against their attacks. Next I'll point the existing attacks at the SIEM and tune each rule against what actually fires.
+
+See also the [networking write-up](networking.md), where I capture this same lab traffic in Wireshark, including the Wazuh agent stream proving the agent-to-manager link is AES-encrypted.

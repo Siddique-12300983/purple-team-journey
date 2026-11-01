@@ -11,13 +11,13 @@ my own logs, and write up everything I learn and break along the way.
 
 <!-- progress:start -->
 ```
-[################............]  58%   14 of 24 done
+[##################..........]  62%   15 of 24 done
 ```
 
 | Phase | Progress | Done |
 |---|---|---|
 | Phase 0: Setup | `################` 100% | 2/2 |
-| Phase 1: Roots | `###########.....` 67% | 4/6 |
+| Phase 1: Roots | `#############...` 83% | 5/6 |
 | Phase 2: Blue | `###########.....` 71% | 5/7 |
 | Phase 3: Red | `######..........` 40% | 2/5 |
 | Term 1 2027 onward: Purple | `####............` 25% | 1/4 |
@@ -75,6 +75,7 @@ in [labs/ad-lab](labs/ad-lab).
 | First purple loop | Kerberoasting: attack from Kali/WIN11, detect in 4769, harden | [kerberoasting.md](labs/ad-lab/kerberoasting.md) |
 | Second purple loop | LLMNR/NBT-NS/mDNS poisoning: capture a hash, detect it, harden all three protocols | [llmnr.md](labs/ad-lab/llmnr.md) |
 | Central SIEM | Wazuh all-in-one collecting Security + Sysmon from both Windows hosts, with custom detection rules | [wazuh.md](labs/ad-lab/wazuh.md) |
+| Lab on the wire | DNS, Kerberos, LLMNR, NTLM and Wazuh traffic read in Wireshark and tied back to the attacks | [networking.md](labs/ad-lab/networking.md) |
 
 ![Login banner GPO on Windows 11](labs/ad-lab/screenshots/gpo-login-banner.png)
 
@@ -95,6 +96,8 @@ The Kerberoasting write-up is the first full loop. The useful lesson from it:
 Windows Server 2025 refuses to issue RC4 tickets, so the roast came back as AES
 (`0x12` in the 4769 event), and the classic "alert on RC4 `0x17`" detection
 would have missed it. On a modern domain you need behavioural signals too. The LLMNR/NBT-NS poisoning write-up is the second loop, and its lesson is the sensor side: my Sigma rule was blind because the Sysmon config logged no UDP, so I had to fix the telemetry before the rule could fire.
+
+The [networking write-up](labs/ad-lab/networking.md) comes at the same attacks from the wire with Wireshark: the DNS SRV records a client uses to find the DC, the Kerberos AES256 ticket (etype 18, the same `0x12` from the 4769), the LLMNR broadcasts before and after hardening, the NTLM handshake that carries the hash Responder steals, and the one link in the lab that is actually encrypted, the Wazuh agent.
 
 ### Detection tooling I've built alongside the lab
 

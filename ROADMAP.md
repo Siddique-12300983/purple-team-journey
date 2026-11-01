@@ -15,7 +15,7 @@ The plan I'm working through, phase by phase.
 - [ ] Linux: filesystem, permissions, users, processes, systemd, logs
 - [x] Bash scripting basics
 - [x] Python basics, one small script a week
-- [ ] Networking refresh and Wireshark
+- [x] Networking refresh and Wireshark
 - [x] Windows internals: processes, services, registry, event logs
 - [x] Build an Active Directory lab (Windows Server DC + Windows 11 client)
 
