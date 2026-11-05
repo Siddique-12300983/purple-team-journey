@@ -11,7 +11,7 @@ my own logs, and write up everything I learn and break along the way.
 
 <!-- progress:start -->
 ```
-[##################..........]  62%   15 of 24 done
+[###################.........]  67%   16 of 24 done
 ```
 
 | Phase | Progress | Done |
@@ -20,7 +20,7 @@ my own logs, and write up everything I learn and break along the way.
 | Phase 1: Roots | `#############...` 83% | 5/6 |
 | Phase 2: Blue | `###########.....` 71% | 5/7 |
 | Phase 3: Red | `######..........` 40% | 2/5 |
-| Term 1 2027 onward: Purple | `####............` 25% | 1/4 |
+| Term 1 2027 onward: Purple | `########........` 50% | 2/4 |
 <!-- progress:end -->
 
 Counted straight from the checkboxes in [ROADMAP.md](ROADMAP.md), redrawn
@@ -76,6 +76,7 @@ in [labs/ad-lab](labs/ad-lab).
 | Second purple loop | LLMNR/NBT-NS/mDNS poisoning: capture a hash, detect it, harden all three protocols | [llmnr.md](labs/ad-lab/llmnr.md) |
 | Central SIEM | Wazuh all-in-one collecting Security + Sysmon from both Windows hosts, with custom detection rules | [wazuh.md](labs/ad-lab/wazuh.md) |
 | Lab on the wire | DNS, Kerberos, LLMNR, NTLM and Wazuh traffic read in Wireshark and tied back to the attacks | [networking.md](labs/ad-lab/networking.md) |
+| Third purple loop | Windows autostart persistence: Run key, Startup folder, scheduled task and service, each attacked, detected and tuned in Wazuh | [persistence.md](labs/ad-lab/persistence.md) |
 
 ![Login banner GPO on Windows 11](labs/ad-lab/screenshots/gpo-login-banner.png)
 

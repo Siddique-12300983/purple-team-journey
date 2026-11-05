@@ -40,7 +40,7 @@ The plan I'm working through, phase by phase.
 ## Term 1 2027 onward: Purple
 
 - [ ] Atomic Red Team attack simulations against the lab
-- [ ] Three solid attack + detection write-ups
+- [x] Three solid attack + detection write-ups
 - [x] Portfolio website
 - [ ] Tech-focused CV
 
